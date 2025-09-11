@@ -7,7 +7,7 @@ class Index extends Controller{
     function index(){
         require('layouts/header.php');
         $this->view->render('index/index');
-        require('layouts/footer.php');
+        //require('layouts/footer.php');
     }
 }
 ?>

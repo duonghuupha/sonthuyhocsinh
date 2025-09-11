@@ -1,0 +1,179 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #fce9d8, #f9e6f0, #e8f0ff);
+    background-size: 400% 400%;
+    animation: gradientMove 18s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Spotlight ánh sáng */
+body::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9), transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+    z-index: 0;
+}
+
+/* Pattern chấm mờ */
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><circle cx='40' cy='40' r='1' fill='rgba(255,255,255,0.2)' /></svg>") repeat;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+header, footer {
+    background: #8b5e34;
+    /* Màu nâu gốc */
+    color: white;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+header nav {
+    float: right;
+}
+
+header nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.login-box {
+    background: #fffaf0;
+    /* Nền be */
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    border: 1px solid #d1b08b;
+}
+
+.login-box .icon {
+    font-size: 40px;
+    color: #8b5e34;
+    margin-bottom: 10px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #8b5e34;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 35px 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #8b5e34;
+}
+
+.input-group .fa {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8b5e34;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #8b5e34;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.login-box button:hover {
+    background: #a4713b;
+    transform: translateY(-2px);
+}
+
+.login-box .links {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.login-box .links a {
+    color: #8b5e34;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        margin: 0 15px;
+        padding: 25px 20px;
+    }
+}

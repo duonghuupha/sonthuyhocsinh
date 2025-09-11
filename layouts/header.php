@@ -11,7 +11,7 @@
 <body>
     <!-- Header -->
     <header class="navbar">
-        <div class="logo">TOEFL Primary</div>
+        <div class="logo">SONTHUY Education</div>
         <nav>
             <ul>
                 <li><a href="#">Trang chủ</a></li>
@@ -24,20 +24,20 @@
 
     <!-- Banner -->
     <section class="banner">
-        <h1>Chào mừng đến với TOEFL Primary</h1>
-        <p>Khám phá các cấp độ bài thi để chuẩn bị tốt nhất cho kỳ thi TOEFL Primary của bạn.</p>
+        <h1>Chào mừng đến với SONTHUY Education</h1>
+        <p>Khám phá thế giới tiếng Anh sinh động và thú vị dành cho học sinh từ lớp 1 đến lớp 5.</p>
     </section>
 
     <!-- Nội dung chính -->
     <main class="exam-container">
-        <h2 class="title">CHỌN CẤP ĐỘ</h2>
+        <h2 class="title">CHỌN MỤC BẠN MUỐN KHÁM PHÁ</h2>
 
         <!-- Nút điều hướng + số trang -->
-        <div class="slider-controls">
+        <!--<div class="slider-controls">
             <button class="prev">&#10094;</button>
             <span class="page-indicator">1/2</span>
             <button class="next">&#10095;</button>
-        </div>
+        </div>-->
 
         <!-- Slider -->
         <div class="exam-slider">
@@ -63,7 +63,7 @@
             </div>
 
             <!-- Trang 2 -->
-            <div class="exam-page">
+            <div class="exam-page active">
                 <div class="exam-card free">
                     <span class="badge">FREE</span>
                     <h3>Cấp độ 4: Review</h3>
@@ -89,34 +89,5 @@
     <footer class="footer">
         <p>© 2025 TOEFL Primary - Phòng thi ảo FLYER</p>
     </footer>
-
-    <script>
-    // Slider JS
-    const pages = document.querySelectorAll(".exam-page");
-    const prevBtn = document.querySelector(".prev");
-    const nextBtn = document.querySelector(".next");
-    const indicator = document.querySelector(".page-indicator");
-    let currentPage = 0;
-
-    function showPage(index) {
-        pages.forEach((p, i) => {
-            p.classList.toggle("active", i === index);
-        });
-        indicator.textContent = `${index + 1}/${pages.length}`;
-    }
-
-    prevBtn.addEventListener("click", () => {
-        currentPage = (currentPage - 1 + pages.length) % pages.length;
-        showPage(currentPage);
-    });
-
-    nextBtn.addEventListener("click", () => {
-        currentPage = (currentPage + 1) % pages.length;
-        showPage(currentPage);
-    });
-
-    showPage(currentPage);
-    </script>
 </body>
-
 </html>
