@@ -4,90 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Son Thuy Education</title>
+    <title>SONTHUY Education</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo URL.'/styles/css/' ?>styles.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Header -->
-    <header class="navbar">
-        <div class="logo">SONTHUY Education</div>
-        <nav>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <!--<li><a href="#">Cấp độ bài thi</a></li>-->
-                <li><a href="#">Đăng nhập</a></li>
-                <!--<li><a href="#">Đăng ký</a></li>-->
-            </ul>
-        </nav>
+    <header class="bg-success text-white py-3 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="<?php echo URL.'/styles/images/' ?>logo_son_thuy.png" alt="Logo" class="me-2" style="height:50px;">
+                <h1 class="h5 m-0 fw-bold">SONTHUY Education</h1>
+            </div>
+            <nav>
+                <a href="#" class="text-white me-3 text-decoration-none">Trang chủ</a>
+                <a href="#" class="text-white text-decoration-none">Đăng nhập</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Banner -->
-    <section class="banner">
-        <h1>Chào mừng đến với SONTHUY Education</h1>
-        <p>Khám phá thế giới tiếng Anh sinh động và thú vị dành cho học sinh từ lớp 1 đến lớp 5.</p>
-    </section>
+    <!-- Main -->
+    <main class="flex-grow-1">
+        <div class="container py-5 text-center">
+            <h2 class="fw-bold text-success mb-2">Chào mừng đến với SONTHUY Education</h2>
+            <p class="text-muted mb-5">
+                Hãy chọn mục bạn muốn khám phá để nâng cao kỹ năng tiếng Anh của mình.
+            </p>
 
-    <!-- Nội dung chính -->
-    <main class="exam-container">
-        <h2 class="title">CHỌN MỤC BẠN MUỐN KHÁM PHÁ</h2>
-
-        <!-- Nút điều hướng + số trang -->
-        <!--<div class="slider-controls">
-            <button class="prev">&#10094;</button>
-            <span class="page-indicator">1/2</span>
-            <button class="next">&#10095;</button>
-        </div>-->
-
-        <!-- Slider -->
-        <div class="exam-slider">
-            <!-- Trang 1 -->
-            <div class="exam-page active">
-                <div class="exam-card free">
-                    <span class="badge">FREE</span>
-                    <h3>Cấp độ 1: Start</h3>
-                    <p>Phù hợp với các bạn mới bắt đầu làm quen với tiếng Anh.</p>
+            <div class="row g-4">
+                <!-- Học -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card card-hover card-green h-100 text-center p-3">
+                        <div class="card-body">
+                            <i class="fas fa-book-reader fa-3x icon-gradient-green mb-3"></i>
+                            <h5 class="card-title text-gradient-green">Học</h5>
+                            <p class="card-text">Bài học sinh động giúp bạn tiếp cận kiến thức tiếng Anh hiệu quả.</p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="exam-card free">
-                    <span class="badge">FREE</span>
-                    <h3>Cấp độ 2: Grow</h3>
-                    <p>Thử thách tiếp theo để nâng cao kỹ năng tiếng Anh của bạn.</p>
+                <!-- Từ vựng -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card card-hover card-blue h-100 text-center p-3">
+                        <div class="card-body">
+                            <i class="fas fa-language fa-3x icon-gradient-blue mb-3"></i>
+                            <h5 class="card-title text-gradient-blue">Từ vựng</h5>
+                            <p class="card-text">Kho từ vựng phong phú, dễ nhớ và áp dụng trong giao tiếp.</p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="exam-card pro">
-                    <span class="badge">PRO</span>
-                    <h3>Cấp độ 3: Achieve</h3>
-                    <p>Chuẩn bị cho kỳ thi TOEFL Primary với những bài tập nâng cao.</p>
+                <!-- Thử thách -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card card-hover card-orange h-100 text-center p-3">
+                        <div class="card-body">
+                            <i class="fas fa-trophy fa-3x icon-gradient-orange mb-3"></i>
+                            <h5 class="card-title text-gradient-orange">Thử thách</h5>
+                            <p class="card-text">Các trò chơi và hoạt động giúp bạn rèn luyện kỹ năng tiếng Anh.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Trang 2 -->
-            <div class="exam-page active">
-                <div class="exam-card free">
-                    <span class="badge">FREE</span>
-                    <h3>Cấp độ 4: Review</h3>
-                    <p>Tổng hợp kiến thức giúp bạn củng cố vững chắc trước kỳ thi.</p>
-                </div>
-
-                <div class="exam-card pro">
-                    <span class="badge">PRO</span>
-                    <h3>Cấp độ 5: Challenge</h3>
-                    <p>Bài tập nâng cao dành cho học sinh muốn đạt kết quả xuất sắc.</p>
-                </div>
-
-                <div class="exam-card pro">
-                    <span class="badge">PRO</span>
-                    <h3>Cấp độ 6: Master</h3>
-                    <p>Chinh phục TOEFL Primary với thử thách cao nhất.</p>
+                <!-- Kiểm tra -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card card-hover card-red h-100 text-center p-3">
+                        <div class="card-body">
+                            <i class="fas fa-clipboard-check fa-3x icon-gradient-red mb-3"></i>
+                            <h5 class="card-title text-gradient-red">Kiểm tra</h5>
+                            <p class="card-text">Đánh giá trình độ qua các bài kiểm tra trực tuyến thông minh.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 TOEFL Primary - Phòng thi ảo FLYER</p>
+    <footer class="bg-success text-white text-center py-3 mt-auto">
+        © 2025 SONTHUY Education - Trung tâm Ngoại ngữ & Kỹ năng sống
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
