@@ -1,165 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta charset="utf-8" />
-		<title>Đăng nhập :: SONTHUY EDUCATION</title>
-		<meta name="description" content="User login page" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-		<link rel="stylesheet" href="<?php echo URL.'/styles/assets' ?>/css/roboto.css" />
-		<link rel="stylesheet" href="<?php echo URL.'/styles/assets' ?>/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="<?php echo URL.'/styles/assets' ?>/font-awesome/4.5.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="<?php echo URL.'/styles/assets' ?>/css/fonts.googleapis.com.css" />
-		<link rel="stylesheet" href="<?php echo URL.'/styles/assets' ?>/css/jquery.toast.css" />
-		<link rel="stylesheet" href="<?php echo URL.'/styles/assets' ?>/css/ace.min.css" />
-		<link rel="stylesheet" href="<?php echo URL.'/styles/assets' ?>/css/ace-rtl.min.css" />
-		<link rel="shortcut icon" href="<?php echo URL ?>/styles/assets/images/logo_son_thuy.png" />
-		<script src="<?php echo URL.'/styles/assets' ?>/js/jquery-2.1.4.min.js"></script>
-		<script src="<?php echo URL.'/styles/assets' ?>/js/jquery.toast.js"></script>
-		<script src="<?php echo URL.'/public' ?>/scripts/javascript/properties.js"></script>
-		<script>
-			var baseUrl = '<?php echo URL ?>', url = '<?php echo $_REQUEST['url'] ?>';
-			$(document).keypress(function (e) {
-				if (e.which == 13) {
-					login();
-				}
-			});
-		</script>
-	</head>
-	<body class="login-layout blur-login">
-		<div class="main-container">
-			<div class="main-content">
-				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1">
-						<div class="login-container">
-							<div class="center">
-								<h1>
-									<i class="ace-icon fa fa-leaf green"></i>
-									<span class="red">SONTHUY</span>
-									<span class="grey" id="id-text2">EDUCATION</span>
-								</h1>
-								<h4 class="blue" id="id-company-text">&copy; Hệ thống quản lý trung tâm đào tạo</h4>
-							</div>
-							<div class="space-6"></div>
-							<div class="position-relative">
-								<div id="login-box" class="login-box visible widget-box no-border">
-									<div class="widget-body">
-										<div class="widget-main">
-											<h4 class="header blue lighter bigger">
-												<i class="ace-icon fa fa-coffee green"></i>
-												Nhập thông tin để đăng nhập
-											</h4>
-											<div class="space-6"></div>
-											<form id="login" method="post" onsubmit="login()">
-												<fieldset>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Tên đăng nhập" name="username" id="username"
-															autofocus />
-															<i class="ace-icon fa fa-user"></i>
-														</span>
-													</label>
-													<label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Mật khẩu" name="password" id="password"/>
-															<i class="ace-icon fa fa-lock"></i>
-														</span>
-													</label>
-													<div class="space"></div>
-													<div class="clearfix">
-														<label class="inline">
-															<input type="checkbox" class="ace" />
-															<span class="lbl"> Ghi nhớ tôi</span>
-														</label>
-														<button type="button" class="width-45 pull-right btn btn-sm btn-primary"onclick="login()" >
-															<i class="ace-icon fa fa-key"></i>
-															<span class="bigger-110">Đăng nhập</span>
-														</button>
-													</div>
-													<div class="space-4"></div>
-												</fieldset>
-											</form>
-											<div class="social-or-login center">
-												<span class="bigger-110">Social</span>
-											</div>
-											<div class="space-6"></div>
-											<div class="social-login center">
-												<a class="btn btn-primary">
-													<i class="ace-icon fa fa-facebook"></i>
-												</a>
-												<a class="btn btn-info">
-													<i class="ace-icon fa fa-twitter"></i>
-												</a>
-												<a class="btn btn-danger">
-													<i class="ace-icon fa fa-google-plus"></i>
-												</a>
-											</div>
-										</div><!-- /.widget-main -->
-										<div class="toolbar clearfix">
-											<div>
-												<a href="javascript:void(0)" data-target="#forgot-box" class="forgot-password-link">
-													Hệ thống quản lý trung tâm đào tạo<br/>SONTHUY EDUCATION
-												</a>
-											</div>
-										</div>
-									</div><!-- /.widget-body -->
-								</div><!-- /.login-box -->
-							</div><!-- /.position-relative -->
-							<div class="navbar-fixed-top align-right">
-								<br />
-								&nbsp;
-								<a id="btn-login-dark" href="javascript:void(0)">Tối</a>
-								&nbsp;
-								<span class="blue">/</span>
-								&nbsp;
-								<a id="btn-login-blur" href="javascript:void(0)">Xanh</a>
-								&nbsp;
-								<span class="blue">/</span>
-								&nbsp;
-								<a id="btn-login-light" href="javascript:void(0)">Sáng</a>
-								&nbsp; &nbsp; &nbsp;
-							</div>
-						</div>
-					</div><!-- /.col -->
-				</div><!-- /.row -->
-			</div><!-- /.main-content -->
-		</div><!-- /.main-container -->
-		<script src="<?php echo URL.'/public' ?>/scripts/login.js"></script>
-		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo URL.'/styles' ?>/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-		</script>
-		<script src="<?php echo URL.'/styles/assets' ?>/js/select2.min.js"></script>
-		<script src="<?php echo URL.'/styles/assets' ?>/js/bootstrap-datepicker.min.js"></script>
-		<script src="<?php echo URL.'/styles/assets' ?>/js/jquery.maskedinput.min.js"></script>
-		<script src="<?php echo URL.'/styles/assets' ?>/js/ace-elements.min.js"></script>
-		<script src="<?php echo URL.'/styles/assets' ?>/js/ace.min.js"></script>
-		<!-- inline scripts related to this page -->
-		<script type="text/javascript">
-			//you don't need this, just used for changing background
-			jQuery(function($) {
-			 $('#btn-login-dark').on('click', function(e) {
-				$('body').attr('class', 'login-layout');
-				$('#id-text2').attr('class', 'white');
-				$('#id-company-text').attr('class', 'blue');
-				
-				e.preventDefault();
-			 });
-			 $('#btn-login-light').on('click', function(e) {
-				$('body').attr('class', 'login-layout light-login');
-				$('#id-text2').attr('class', 'grey');
-				$('#id-company-text').attr('class', 'blue');
-				
-				e.preventDefault();
-			 });
-			 $('#btn-login-blur').on('click', function(e) {
-				$('body').attr('class', 'login-layout blur-login');
-				$('#id-text2').attr('class', 'white');
-				$('#id-company-text').attr('class', 'light-blue');
-				
-				e.preventDefault();
-			 });
-			 
-			});
-		</script>
-	</body>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - SONTHUY Education</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+    body {
+        min-height: 100vh;
+        background: linear-gradient(to bottom right, #e0f7fa, #fce4ec);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 380px;
+        padding: 2rem;
+        border-radius: 1rem;
+        background: #fff;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .login-card .icon {
+        font-size: 2.5rem;
+        color: #2e7d32;
+        margin-bottom: 0.8rem;
+    }
+
+    .login-card h4 {
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-control {
+        height: 40px;
+        font-size: 0.9rem;
+        border-radius: 0.5rem;
+        padding-left: 40px;
+        /* để icon không chồng lên chữ */
+    }
+
+    .input-icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+
+    .form-group {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+
+    .btn-login {
+        background: linear-gradient(45deg, #43a047, #2e7d32);
+        border: none;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 0.6rem;
+        padding: 10px;
+        transition: 0.3s;
+    }
+
+    .btn-login:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+    }
+
+    .login-card a {
+        font-size: 0.85rem;
+        color: #2e7d32;
+        text-decoration: none;
+    }
+
+    .login-card a:hover {
+        text-decoration: underline;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="login-card">
+        <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+        <h4>Đăng nhập</h4>
+        <form>
+            <div class="form-group">
+                <span class="input-icon"><i class="fas fa-user"></i></span>
+                <input type="text" class="form-control" placeholder="Tên đăng nhập">
+            </div>
+            <div class="form-group">
+                <span class="input-icon"><i class="fas fa-lock"></i></span>
+                <input type="password" class="form-control" placeholder="Mật khẩu">
+            </div>
+            <button type="submit" class="btn btn-login w-100 mb-3">Đăng nhập</button>
+            <div class="d-flex justify-content-between">
+                <a href="#">Quên mật khẩu?</a>
+                <a href="#">Tạo tài khoản</a>
+            </div>
+        </form>
+    </div>
+</body>
+
 </html>

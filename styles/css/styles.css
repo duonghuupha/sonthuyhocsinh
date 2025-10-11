@@ -88,3 +88,23 @@ body {
 .card-red:hover {
 	background: linear-gradient(135deg, #f5b7b1, #f1948a);
 }
+
+/* Làm mờ nền khi menu mở */
+.offcanvas-backdrop.show {
+	backdrop-filter: blur(4px);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Hiệu ứng mượt khi mở menu */
+.offcanvas {
+	transition: transform 0.35s ease-in-out;
+}
+
+/* Tăng kích thước biểu tượng toggle */
+.navbar-toggler {
+	font-size: 1.25rem;
+}
+
+.nav-link:hover {
+	text-decoration: underline;
+}
