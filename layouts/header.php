@@ -9,6 +9,7 @@ if(!isset($_SESSION['data'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SONTHUY Education</title>
+    <link rel="stylesheet" href="<?php echo URL.'/styles/css/' ?>roboto.css">
     <link href="<?php echo URL.'/styles/css/' ?>bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo URL.'/styles/css/' ?>all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo URL.'/styles/css/' ?>styles.css">
