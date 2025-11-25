@@ -12,7 +12,7 @@ class Index_Model extends Model{
     }
 
     function get_data($username, $password){
-        $query = $this->db->query("SELECT id, code, username, status, last_login, info_login FROM tbl_account WHERE username = '$username' 
+        $query = $this->db->query("SELECT id, code, username, status, last_login, info_login, token FROM tbl_account WHERE username = '$username' 
                                     AND password = '$password' AND status = 1");
         return $query->fetchAll();
     }

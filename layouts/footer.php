@@ -3,5 +3,7 @@
 	</footer>
 	<script src="<?php echo URL.'/styles/' ?>js/bootstrap.bundle.min.js"></script>
 	<script src="<?php echo URL.'/styles/' ?>js/jquery-3.6.0.min.js"></script>
+    <script src="<?php echo URL.'/styles/' ?>js/jquery.toast.js"></script>
+    <script src="<?php echo URL.'/public/' ?>properties.js"></script>
 </body>
 </html>

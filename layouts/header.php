@@ -13,6 +13,10 @@ if(!isset($_SESSION['data'])){
     <link href="<?php echo URL.'/styles/css/' ?>bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo URL.'/styles/css/' ?>all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo URL.'/styles/css/' ?>styles.css">
+    <link rel="shortcut icon" href="<?php echo URL ?>/styles/images/logo_son_thuy.png" />
+    <script>
+        var baseUrl = '<?php echo URL; ?>';
+    </script>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -41,7 +45,8 @@ if(!isset($_SESSION['data'])){
                             <a class="nav-link text-white" href="#">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Đăng nhập</a>
+                            <a class="nav-link text-white" href="javascript:void(0)" 
+                            onclick="window.location.href='<?php echo URL.'/index/logout?token='.$_SESSION['data'][0]['token'] ?>'">Đăng xuất</a>
                         </li>
                     </ul>
                 </div>
@@ -67,7 +72,8 @@ if(!isset($_SESSION['data'])){
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white fs-5" href="#">
+                        <a class="nav-link text-white fs-5" href="javascript:void(0)"
+                        onclick="window.location.href='<?php echo URL.'/index/logout?token='.$_SESSION['data'][0]['token'] ?>'">
                             <i class="fa-solid fa-right-to-bracket me-2"></i> Đăng nhập
                         </a>
                     </li>

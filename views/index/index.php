@@ -1,11 +1,6 @@
 <!-- Main -->
 <main class="flex-grow-1">
     <div class="container py-5 text-center">
-        <h2 class="fw-bold text-success mb-2">Chào mừng đến với SONTHUY Education</h2>
-        <p class="text-muted mb-5">
-            Hãy chọn mục bạn muốn khám phá để nâng cao kỹ năng tiếng Anh của mình.
-        </p>
-
         <div class="row g-4">
             <!-- Học -->
             <div class="col-12 col-sm-6 col-lg-3">

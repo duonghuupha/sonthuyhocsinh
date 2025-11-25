@@ -1,0 +1,37 @@
+.layout-flex{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width:100%;
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(
+        180deg,
+        #2c2a7c 0%,    /* xanh tím đậm phía trên */
+        #5a2ca0 35%,   /* tím */
+        #8c2cbf 60%,   /* tím hồng */
+        #d93b82 100%   /* hồng đậm phía dưới */
+    );
+    background-attachment: fixed;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+}
+
+header{
+    flex-shrink: 0;
+    z-index: 1030;
+}
+
+footer{
+    flex-shrink: 0;
+    z-index: 1030;
+}
+
+main{
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+}
